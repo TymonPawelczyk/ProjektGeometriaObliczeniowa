@@ -9,8 +9,7 @@ def index():
     """
     Strona główna aplikacji.
     
-    Ta funkcja wyświetla główną stronę z interaktywnym płótnem do rysowania punktów
-    i obliczania otoczki wypukłej.
+    Ta funkcja wyświetla główną stronę z interaktywnym płótnem do zaznaczania punktów i obliczania otoczki wypukłej.
     """
     return render_template('index.html')
 
@@ -19,9 +18,7 @@ def calculate():
     """
     Oblicza otoczkę wypukłą dla podanych punktów.
     
-    Ta funkcja przyjmuje punkty wysłane z przeglądarki (przez JavaScript),
-    oblicza dla nich otoczkę wypukłą, rozpoznaje kształt i odsyła wyniki 
-    z powrotem do przeglądarki.
+    Ta funkcja przyjmuje punkty wysłane z przeglądarki (przez JavaScript), oblicza dla nich otoczkę wypukłą, rozpoznaje kształt i odsyła wyniki z powrotem do przeglądarki.
     
     Oczekiwane dane wejściowe (JSON):
         {
