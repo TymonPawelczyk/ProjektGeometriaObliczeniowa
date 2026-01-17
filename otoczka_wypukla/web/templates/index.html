@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otoczka Wypukła (Projekt)</title>
+    <!-- Link do pliku CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Projekt: Otoczka Wypukła 4 Punktów</h1>
+    
+    <div class="main-wrapper">
+        <!-- Lewa strona: Canvas -->
+        <div class="canvas-container">
+            <canvas id="geometryCanvas" width="600" height="600"></canvas>
+            <div class="info" id="statusInfo">Wprowadź punkty (0/4)</div>
+            <div class="desc" id="descInfo"></div>
+        </div>
+
+        <!-- Prawa strona: Panel -->
+        <div class="sidebar">
+            <h3>Współrzędne punktów</h3>
+            <div id="inputsContainer">
+                <!-- Generowane przez JS -->
+            </div>
+
+            <div class="controls">
+                <button onclick="calculateFromInputs()">Oblicz</button>
+                <button class="reset-btn" onclick="resetCanvas()">Reset (r)</button>
+            </div>
+
+            <div id="coordsContainer">
+                <div style="font-weight: bold; margin-bottom: 5px; color: #333;">Wierzchołki otoczki:</div>
+                <div id="coordsInfo"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link do pliku JS -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

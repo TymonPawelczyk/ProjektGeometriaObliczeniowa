@@ -1,0 +1,122 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+h1 { color: #333; margin-bottom: 20px; }
+
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.canvas-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+canvas {
+    border: 2px solid #ddd;
+    cursor: crosshair;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.sidebar {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: left;
+}
+
+.point-input-group {
+    margin-bottom: 15px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+.point-input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+.inputs-row {
+    display: flex;
+    gap: 10px;
+}
+.inputs-row input {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover { background-color: #0056b3; }
+button.reset-btn { background-color: #6c757d; }
+button.reset-btn:hover { background-color: #5a6268; }
+
+.info {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    min-height: 1.2em;
+    text-align: center;
+}
+.desc {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+    text-align: center;
+}
+#coordsContainer {
+    margin-top: 15px; 
+    display: none;
+    text-align: left;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+#coordsInfo {
+    font-family: monospace; 
+    font-size: 13px; 
+    color: #007bff;
+}
+
+canvas {
+    border: 2px solid #ddd;
+    cursor: crosshair; /* Domyślny do dodawania punktów */
+    background-color: #fff;
+    border-radius: 4px;
+}
+canvas:active {
+    cursor: grabbing; /* Podczas przesuwania */
+}
