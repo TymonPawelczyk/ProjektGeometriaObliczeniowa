@@ -2,9 +2,7 @@ def cross_product(o, a, b):
     """
     Oblicza iloczyn wektorowy dla trzech punktów na płaszczyźnie.
     
-    Ta funkcja sprawdza, w którą stronę trzeba skręcić, aby przejść z punktu O 
-    przez punkt A do punktu B. Wynik dodatni oznacza skręt w lewo, ujemny w prawo,
-    a zero oznacza, że punkty leżą na jednej linii prostej.
+    Ta funkcja sprawdza, w którą stronę trzeba skręcić, aby przejść z punktu O przez punkt A do punktu B. Wynik dodatni oznacza skręt w lewo, ujemny w prawo, a zero oznacza, że punkty leżą na jednej linii prostej.
     
     Parametry:
         o: Punkt początkowy (środkowy) [x, y]
@@ -18,12 +16,7 @@ def cross_product(o, a, b):
 
 def get_convex_hull(points):
     """
-    Znajduje otoczkę wypukłą - najmniejszy wielokąt otaczający wszystkie punkty.
-    
-    Wyobraź sobie, że wbijasz gwoździe w punkty na tablicy, a potem naciągasz 
-    na nie gumkę - taki kształt to właśnie otoczka wypukła. Algorytm używa 
-    metody "Monotone Chain" (Łańcuch Monotoniczny), która działa podobnie 
-    jak rysowanie dolnego brzegu, a potem górnego brzegu tej gumki.
+    Znajduje otoczkę wypukłą - najmniejszy wielokąt otaczający wszystkie punkty. Algorytm używa metody "Monotone Chain" (Łańcuch Monotoniczny).
     
     Parametry:
         points: Lista punktów w formacie [[x1, y1], [x2, y2], ...]
@@ -65,9 +58,7 @@ def classify_shape(hull_points):
     """
     Rozpoznaje, jaki kształt geometryczny tworzy otoczka wypukła.
     
-    Na podstawie liczby wierzchołków otoczki określa, czy otrzymaliśmy punkt,
-    odcinek, trójkąt, czworokąt czy inny wielokąt. Dodatkowo podaje wyjaśnienie,
-    co oznacza taki wynik.
+    Na podstawie liczby wierzchołków otoczki określa, czy otrzymaliśmy punkt,odcinek, trójkąt, czworokąt czy inny wielokąt. Dodatkowo podaje wyjaśnienie, co oznacza taki wynik.
     
     Parametry:
         hull_points: Lista punktów tworzących otoczkę wypukłą
