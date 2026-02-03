@@ -49,22 +49,43 @@ otoczka_wypukla/
 
 ## 🚀 Instrukcja Uruchomienia
 
-### Krok 1: Aktywacja środowiska
-Upewnij się, że jesteś w głównym katalogu projektu, a następnie aktywuj wirtualne środowisko:
+### Krok 1: Wymagania
+Upewnij się, że masz zainstalowanego Pythona w wersji **3.10** lub nowszej.
 
+### Krok 2: Konfiguracja środowiska wirtualnego
+Zaleca się używanie środowiska wirtualnego (venv). Wykonaj poniższe polecenia w głównym katalogu projektu:
+
+**System Linux / MacOS:**
 ```bash
-# Linux / MacOS
+# Tworzenie venv
+python3 -m venv otoczka_wypukla/venv
+# Aktywacja
 source otoczka_wypukla/venv/bin/activate
 ```
 
-### Krok 2: Start serwera
-Uruchom aplikację za pomocą skryptu startowego:
+**System Windows (PowerShell):**
+```powershell
+# Tworzenie venv
+python -m venv otoczka_wypukla/venv
+# Aktywacja
+.\otoczka_wypukla\venv\Scripts\Activate.ps1
+```
+
+### Krok 3: Instalacja zależności
+Po aktywacji środowiska zainstaluj wymagane biblioteki (głównie Flask):
+
+```bash
+pip install -r otoczka_wypukla/requirements.txt
+```
+
+### Krok 4: Start serwera
+Uruchom aplikację za pomocą głównego skryptu:
 
 ```bash
 python otoczka_wypukla/run.py
 ```
 
-### Krok 3: Obsługa
+### Krok 5: Obsługa w przeglądarce
 Otwórz przeglądarkę internetową i przejdź pod adres:
 👉 **http://127.0.0.1:5000**
 
@@ -79,8 +100,9 @@ Aplikacja mapuje piksele ekranu na matematyczny układ współrzędnych kartezja
 *   **Precyzja:** Obliczenia wykonywane są na zmiennoprzecinkowych liczbach rzeczywistych (float), a wyniki prezentowane z dokładnością do 2 miejsc po przecinku.
 
 ## 🧪 Testy
-Aby uruchomić testy jednostkowe (sprawdzające m.in. przypadki punktów współliniowych):
+Aby zweryfikować poprawność działania algorytmów, uruchom testy jednostkowe:
 
 ```bash
+# Uruchomienie wszystkich testów
 python -m unittest discover otoczka_wypukla/tests
 ```
