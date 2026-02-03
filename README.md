@@ -84,6 +84,3 @@ Aby uruchomić testy jednostkowe (sprawdzające m.in. przypadki punktów współ
 ```bash
 python -m unittest discover otoczka_wypukla/tests
 ```
-
----
-*Autor: Zespół projektowy Geometria Obliczeniowa*
